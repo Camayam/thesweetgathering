@@ -93,33 +93,38 @@
   <!-- GALLERY -->
   <section class="recipe-section gallery" id="gallery">
     <h2 class="section-title">From the Kitchen</h2>
-    <p class="section-note">A few of what's been baked before — swap these for your own photos.</p>
-    <div class="gallery-grid">
-      <figure class="photo-slot">
-        <div class="photo-placeholder"><img src="assets/cake-1.jpg" alt="[Describe this bake — e.g. lemon drizzle cake]" onerror="this.style.display='none'"></div>
-        <figcaption>[lemon drizzle]</figcaption>
-      </figure>
-      <figure class="photo-slot">
-        <div class="photo-placeholder"><img src="assets/cake-2.jpg" alt="[Describe this bake — e.g. carrot cake with cream cheese frosting]" onerror="this.style.display='none'"></div>
-        <figcaption>[carrot &amp; cream cheese]</figcaption>
-      </figure>
-      <figure class="photo-slot">
-        <div class="photo-placeholder"><img src="assets/cake-3.jpg" alt="[Describe this bake — e.g. chocolate layer cake]" onerror="this.style.display='none'"></div>
-        <figcaption>[chocolate layer]</figcaption>
-      </figure>
-      <figure class="photo-slot">
-        <div class="photo-placeholder"><img src="assets/cake-4.jpg" alt="[Describe this bake — e.g. fruit tart]" onerror="this.style.display='none'"></div>
-        <figcaption>[seasonal fruit tart]</figcaption>
-      </figure>
-      <figure class="photo-slot">
-        <div class="photo-placeholder"><img src="assets/cake-5.jpg" alt="[Describe this bake — e.g. sourdough banana bread]" onerror="this.style.display='none'"></div>
-        <figcaption>[banana bread]</figcaption>
-      </figure>
-      <figure class="photo-slot">
-        <div class="photo-placeholder"><img src="assets/cake-6.jpg" alt="[Describe this bake — e.g. spiced tea loaf]" onerror="this.style.display='none'"></div>
-        <figcaption>[spiced tea loaf]</figcaption>
-      </figure>
+    <p class="section-note">A few of what's been baked before — swipe through, or swap these for your own photos.</p>
+    <div class="carousel">
+      <button class="carousel-arrow prev" type="button" aria-label="Previous photo">‹</button>
+      <div class="gallery-track" id="galleryTrack">
+        <figure class="photo-slot">
+          <div class="photo-placeholder"><img src="assets/cake-1.jpg" alt="[Describe this bake — e.g. lemon drizzle cake]" onerror="this.style.display='none'"></div>
+          <figcaption>[lemon drizzle]</figcaption>
+        </figure>
+        <figure class="photo-slot">
+          <div class="photo-placeholder"><img src="assets/cake-2.jpg" alt="[Describe this bake — e.g. carrot cake with cream cheese frosting]" onerror="this.style.display='none'"></div>
+          <figcaption>[carrot &amp; cream cheese]</figcaption>
+        </figure>
+        <figure class="photo-slot">
+          <div class="photo-placeholder"><img src="assets/cake-3.jpg" alt="[Describe this bake — e.g. chocolate layer cake]" onerror="this.style.display='none'"></div>
+          <figcaption>[chocolate layer]</figcaption>
+        </figure>
+        <figure class="photo-slot">
+          <div class="photo-placeholder"><img src="assets/cake-4.jpg" alt="[Describe this bake — e.g. fruit tart]" onerror="this.style.display='none'"></div>
+          <figcaption>[seasonal fruit tart]</figcaption>
+        </figure>
+        <figure class="photo-slot">
+          <div class="photo-placeholder"><img src="assets/cake-5.jpg" alt="[Describe this bake — e.g. sourdough banana bread]" onerror="this.style.display='none'"></div>
+          <figcaption>[banana bread]</figcaption>
+        </figure>
+        <figure class="photo-slot">
+          <div class="photo-placeholder"><img src="assets/cake-6.jpg" alt="[Describe this bake — e.g. spiced tea loaf]" onerror="this.style.display='none'"></div>
+          <figcaption>[spiced tea loaf]</figcaption>
+        </figure>
+      </div>
+      <button class="carousel-arrow next" type="button" aria-label="Next photo">›</button>
     </div>
+    <div class="carousel-dots" id="galleryDots" aria-hidden="true"></div>
   </section>
 
   <!-- THE BAKER -->
