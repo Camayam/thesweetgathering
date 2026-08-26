@@ -436,10 +436,6 @@ body {
 @media (max-width: 560px) {
   .carousel-arrow { display: none; }
   .gallery-track .photo-slot { width: 78%; }
-  .top-bar { height: 56px; }
-  body { padding-top: calc(56px + clamp(1rem, 4vw, 3rem)); }
-  .top-bar-logo { width: 30px; height: 30px; }
-  .top-bar-name { font-size: 0.95rem; }
 }
 
 /* ---------- Baker row ---------- */
@@ -522,4 +518,8 @@ body {
   .card-frame::before { inset: 6px; }
   .baker-row { justify-content: center; text-align: center; }
   .baker-copy { flex-basis: 100%; }
+  .top-bar { height: 56px; }
+  body { padding-top: calc(56px + clamp(1rem, 4vw, 3rem)); }
+  .top-bar-logo { width: 30px; height: 30px; }
+  .top-bar-name { font-size: 0.95rem; }
 }
