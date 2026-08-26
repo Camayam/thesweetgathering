@@ -61,11 +61,14 @@ body {
 }
 
 .top-bar-logo {
-  flex: 0 0 auto;
+  flex: 0 0 38px;
   width: 38px;
   height: 38px;
+  max-width: 38px;
+  max-height: 38px;
   border-radius: 50%;
   aspect-ratio: 1 / 1;
+  overflow: hidden;
 }
 
 .top-bar-logo::after {
