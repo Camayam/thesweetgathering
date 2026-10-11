@@ -28,8 +28,14 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: #4a2f5c;
-  background-image: radial-gradient(circle at 15% 10%, #6b4a7a 0%, #3c2749 70%);
+  background-color: #4a2f5c;
+  background-image:
+    linear-gradient(rgba(58, 36, 52, 0.45), rgba(58, 36, 52, 0.6)),
+    url("../assets/background_1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: var(--font-body);
   color: var(--ink);
   min-height: 100vh;
