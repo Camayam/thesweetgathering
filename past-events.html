@@ -39,11 +39,22 @@
     }
 
     .event-card {
+      display: block;
       background: rgba(255,255,255,0.7);
       border: 1px solid rgba(90, 103, 66, 0.12);
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 12px 24px rgba(73, 62, 58, 0.08);
+      color: inherit;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .event-card:hover,
+    .event-card:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 30px rgba(73, 62, 58, 0.15);
+      outline: none;
     }
 
     .event-card img {
@@ -105,6 +116,7 @@
         <nav class="menu-panel" aria-label="Main navigation">
           <a href="index.html">Home</a>
           <a href="past-events.html">Past Events</a>
+          <a href="https://www.instagram.com/thesweetgathering.nl?srtk=cGJ3eWJseHhvZzds&amp;utm_source=qr" target="_blank" rel="noopener noreferrer"><svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
         </nav>
       </div>
     </div>
@@ -122,44 +134,30 @@
 
     <section class="recipe-section">
       <h2 class="section-title">From our previous tables</h2>
-      <p class="section-note">Cake, tea, conversation, and plenty of homemade joy.</p>
-
       <div class="event-grid">
-        <article class="event-card">
-          <img src="assets/carousel/cs1.jpeg" alt="Cupcakes at a previous event">
+        <a class="event-card" href="past-event-october-2026.html" aria-label="Read about The Sweet Gathering in October 2026">
+          <img src="assets/past-events/october-2026/thesweetgathering.jpeg" alt="Poster of the previous event">
           <div class="event-card-content">
-            <span class="pill">Spring 2024</span>
-            <h3>Sunlit Cupcakes</h3>
-            <p>Fresh citrus bakes, soft afternoon tea, and a bright little table full of conversation.</p>
+            <span class="pill">October 2026</span>
+            <h3>The Sweet Gathering</h3>
+            <p>An afternoon all about freshly baked delights, new faces, and good conversations.</p>
           </div>
-        </article>
-
-        <article class="event-card">
-          <img src="assets/carousel/cs2.jpeg" alt="Raspberry and vanilla cupcakes at a previous event">
+        </a>
+        <!-- <a class="event-card" href="past-event-october-2026.html" aria-label="Read about The Sweet Gathering in October 2026">
+          <img src="assets/past-events/october-2026/thesweetgathering.jpeg" alt="Poster of the previous event">
           <div class="event-card-content">
-            <span class="pill">Autumn 2024</span>
-            <h3>Raspberry &amp; Vanilla</h3>
-            <p>Warm colours, generous slices, and the kind of gathering that made everyone want to stay a little longer.</p>
+            <span class="pill">October 2026</span>
+            <h3>The Sweet Gathering</h3>
+            <p>An afternoon all about freshly baked delights, new faces, and good conversations.</p>
           </div>
-        </article>
-
-        <article class="event-card">
-          <img src="assets/carousel/cs3.jpeg" alt="Banoffee brownies at a previous event">
-          <div class="event-card-content">
-            <span class="pill">Winter 2024</span>
-            <h3>Banoffee Brownies</h3>
-            <p>Comforting treats, tea on repeat, and a cozy sense of community in every corner of the room.</p>
-          </div>
-        </article>
+        </a> -->
       </div>
     </section>
 
-    <section class="recipe-section">
-      <h2 class="section-title">A little sweet memory</h2>
-      <p class="section-note">Every gathering feels different, but the ingredients are always the same: good cake, good company, and good energy.</p>
-    </section>
-  </div>
-
+    <footer class="footer">
+      <p class="scribble">Follow us on:</p>
+      <a class="instagram-link" href="https://www.instagram.com/thesweetgathering.nl?srtk=cGJ3eWJseHhvZzds&amp;utm_source=qr" target="_blank" rel="noopener noreferrer"><svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
+    </footer>
   <script src="js/script.js"></script>
 </body>
 </html>
