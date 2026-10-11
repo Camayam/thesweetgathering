@@ -622,12 +622,26 @@ body {
   opacity: 0.85;
 }
 
+.rsvp-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .cta-large {
   font-size: 0.9rem;
   padding: 1em 2.2em;
 }
 
-.rsvp .cta-large {
+.cta-secondary {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 8px 16px rgba(59, 42, 46, 0.10), 2px 2px 0 rgba(59, 42, 46, 0.7);
+  animation: none;
+}
+
+.rsvp .cta-large:not(.cta-secondary) {
   margin-top: 0.5rem;
   box-shadow: 0 12px 24px rgba(211, 28, 88, 0.24), 3px 3px 0 rgba(59, 42, 46, 0.9);
 }
