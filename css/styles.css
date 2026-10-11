@@ -7,10 +7,10 @@
   --gold: #c9a227;
   --line: #d8c9a8;
 
-  --font-display: "Fraunces", serif;
-  --font-body: "Newsreader", serif;
-  --font-mono: "Courier Prime", monospace;
-  --font-script: "Caveat", cursive;
+  --font-display: "Outfit", sans-serif;
+  --font-body: "Outfit", sans-serif;
+  --font-mono: "Outfit", sans-serif;
+  --font-script: "Outfit", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -39,56 +39,6 @@ body {
   min-height: 100vh;
   padding: clamp(1rem, 4vw, 3rem) 1rem;
   padding-top: calc(68px + clamp(1rem, 4vw, 3rem));
-}
-
-/* ---------- Top bar ---------- */
-.top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  height: 68px;
-  background: linear-gradient(180deg, rgba(74, 47, 92, 0.82), rgba(60, 39, 73, 0.82));
-  backdrop-filter: blur(12px) saturate(1.2);
-  -webkit-backdrop-filter: blur(12px) saturate(1.2);
-  border-bottom: 1px solid rgba(201, 162, 39, 0.35);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
-}
-
-.top-bar-inner {
-  height: 100%;
-  padding: 0 clamp(1rem, 4vw, 2rem);
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-}
-
-.top-bar-logo {
-  flex: 0 0 38px;
-  width: 38px;
-  height: 38px;
-  max-width: 38px;
-  max-height: 38px;
-  border-radius: 50%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-}
-
-.top-bar-logo::after {
-  font-size: 0.42rem;
-  letter-spacing: 0.04em;
-}
-
-.top-bar-name {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.1rem;
-  letter-spacing: 0.01em;
-  color: var(--paper);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .card-frame {
@@ -148,6 +98,20 @@ body {
 .amp-inline {
   font-style: italic;
   color: var(--jam);
+}
+
+.hero-image-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 1.25rem;
+}
+
+.hero-image {
+  display: block;
+  width: min(220px, 54vw);
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .hero-art { margin: 1.25rem 0; }
@@ -314,50 +278,6 @@ body {
   max-width: 58ch;
 }
 
-/* ---------- Photo placeholders ---------- */
-.photo-placeholder {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border: 1px dashed var(--line);
-  background: repeating-linear-gradient(
-    45deg,
-    var(--paper-edge),
-    var(--paper-edge) 8px,
-    var(--paper) 8px,
-    var(--paper) 16px
-  );
-}
-
-.photo-placeholder img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 2;
-  background: var(--paper);
-}
-
-.photo-placeholder::after {
-  content: "add photo";
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--sage);
-  z-index: 1;
-}
-
-.top-bar-logo {
-  border-color: rgba(247, 239, 220, 0.4);
-}
-
 /* ---------- Gallery carousel ---------- */
 .carousel {
   position: relative;
@@ -384,6 +304,22 @@ body {
   width: min(70%, 260px);
   scroll-snap-align: center;
   margin: 0;
+}
+
+.photo-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-edge);
+}
+
+.photo-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .photo-slot:nth-child(2n) .photo-placeholder { transform: rotate(-0.6deg); }
