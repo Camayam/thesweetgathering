@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Events — The Sweet Gathering</title>
+  <meta name="description" content="A look back at previous Sweet Gathering events, cakes, and community moments.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    :root {
+      --font-display: "Outfit", "Segoe UI", sans-serif;
+      --ink: #2f2a2c;
+      --paper: #f7f0e4;
+      --panel: rgba(255, 255, 255, 0.72);
+      --rose: #d31c58;
+      --sage: #b6c59c;
+      --sage-deep: #82926d;
+      --shadow: rgba(54, 46, 50, 0.12);
+    }
+
+    body {
+      font-family: var(--font-display);
+      background:
+        linear-gradient(rgba(27, 19, 15, 0.42), rgba(27, 19, 15, 0.42)),
+        url("assets/background.jpg") center/cover fixed no-repeat;
+      color: var(--ink);
+      min-height: 100vh;
+      padding: clamp(1rem, 4vw, 3rem) 1rem;
+      padding-top: 5.5rem;
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .event-card {
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(90, 103, 66, 0.12);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(73, 62, 58, 0.08);
+    }
+
+    .event-card img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .event-card-content {
+      padding: 1rem 1rem 1.2rem;
+    }
+
+    .event-card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.15rem;
+      color: var(--ink);
+    }
+
+    .event-card p {
+      margin: 0;
+      color: rgba(47, 42, 44, 0.8);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .pill {
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(179, 199, 147, 0.18);
+      color: var(--sage-deep);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+    }
+
+    @media (max-width: 640px) {
+      .event-card img {
+        height: 190px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-bar-logo" aria-label="The Sweet Gathering logo">
+        <img src="assets/Logo_The Sweet Gathering.png" alt="The Sweet Gathering logo" onerror="this.style.display='none'">
+      </div>
+
+      <div class="top-bar-menu">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+          <span>Menu</span>
+          <span class="menu-caret">▾</span>
+        </button>
+        <nav class="menu-panel" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="past-events.html">Past Events</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="card-frame">
+    <header class="hero">
+      <p class="eyebrow">past gatherings</p>
+      <div class="hero-image-wrap">
+        <img src="assets/Logo_The Sweet Gathering.png" alt="The Sweet Gathering logo" class="hero-image">
+      </div>
+      <p class="hero-sub">A few of the sweet moments we’ve shared before.</p>
+      <a class="cta" href="index.html">Back to the next gathering</a>
+    </header>
+
+    <section class="recipe-section">
+      <h2 class="section-title">From our previous tables</h2>
+      <p class="section-note">Cake, tea, conversation, and plenty of homemade joy.</p>
+
+      <div class="event-grid">
+        <article class="event-card">
+          <img src="assets/carousel/cs1.jpeg" alt="Cupcakes at a previous event">
+          <div class="event-card-content">
+            <span class="pill">Spring 2024</span>
+            <h3>Sunlit Cupcakes</h3>
+            <p>Fresh citrus bakes, soft afternoon tea, and a bright little table full of conversation.</p>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img src="assets/carousel/cs2.jpeg" alt="Raspberry and vanilla cupcakes at a previous event">
+          <div class="event-card-content">
+            <span class="pill">Autumn 2024</span>
+            <h3>Raspberry &amp; Vanilla</h3>
+            <p>Warm colours, generous slices, and the kind of gathering that made everyone want to stay a little longer.</p>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img src="assets/carousel/cs3.jpeg" alt="Banoffee brownies at a previous event">
+          <div class="event-card-content">
+            <span class="pill">Winter 2024</span>
+            <h3>Banoffee Brownies</h3>
+            <p>Comforting treats, tea on repeat, and a cozy sense of community in every corner of the room.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="recipe-section">
+      <h2 class="section-title">A little sweet memory</h2>
+      <p class="section-note">Every gathering feels different, but the ingredients are always the same: good cake, good company, and good energy.</p>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
