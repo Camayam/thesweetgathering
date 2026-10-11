@@ -637,6 +637,14 @@ body {
   gap: 1rem;
 }
 
+.rsvp-actions .cta-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 12rem;
+  text-align: center;
+}
+
 .cta-large {
   font-size: 0.9rem;
   padding: 1em 2.2em;
