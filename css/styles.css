@@ -28,16 +28,23 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background-image: url("../assets/bg_2.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  position: relative;
+  isolation: isolate;
+  background-color: #f7efdc;
   font-family: var(--font-body);
   color: var(--ink);
   min-height: 100vh;
   padding: clamp(1rem, 4vw, 3rem) 1rem;
   padding-top: 5.5rem;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("../assets/bg_2.jpeg") center / cover no-repeat;
+  pointer-events: none;
 }
 
 .top-bar {
@@ -182,7 +189,7 @@ body {
 .card-frame {
   max-width: 820px;
   margin: 0 auto;
-  background: linear-gradient(180deg, rgba(247, 239, 220, 0.99), rgba(245, 236, 211, 0.98));
+  background: linear-gradient(180deg, rgba(247, 239, 220, 0.93), rgba(245, 236, 211, 0.90));
   border: 1px solid rgba(116, 93, 60, 0.18);
   border-radius: 28px;
   box-shadow: 0 28px 70px rgba(0,0,0,0.18), 0 8px 18px rgba(59, 42, 46, 0.08), inset 0 2px 0 rgba(255,255,255,0.7);
