@@ -7,22 +7,56 @@
 
   if (prefersReduced || !("IntersectionObserver" in window)) {
     targets.forEach(function (el) { el.classList.add("is-visible"); });
-    return;
+  } else {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    targets.forEach(function (el) { observer.observe(el); });
+  }
+})();
+
+(function () {
+  var topBarMenu = document.querySelector(".top-bar-menu");
+  var menuToggle = document.querySelector(".menu-toggle");
+
+  if (!topBarMenu || !menuToggle) return;
+
+  function closeMenu() {
+    topBarMenu.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
   }
 
-  var observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+  function toggleMenu() {
+    var isOpen = topBarMenu.classList.contains("open");
+    topBarMenu.classList.toggle("open", !isOpen);
+    menuToggle.setAttribute("aria-expanded", String(!isOpen));
+  }
 
-  targets.forEach(function (el) { observer.observe(el); });
+  menuToggle.addEventListener("click", function (event) {
+    event.stopPropagation();
+    toggleMenu();
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!topBarMenu.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
 })();
 
 // Gallery carousel: arrow buttons + dot indicators, synced to native scroll-snap.
