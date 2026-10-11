@@ -97,6 +97,11 @@ body {
   filter: drop-shadow(0 2px 3px rgba(59, 42, 46, 0.12));
 }
 
+.top-bar-logo:focus-visible {
+  outline: 2px solid var(--jam);
+  outline-offset: 3px;
+}
+
 .top-bar-menu {
   position: relative;
   margin-left: auto;
@@ -714,6 +719,46 @@ body {
   height: 1.1em;
   flex: 0 0 auto;
   vertical-align: -0.15em;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(116, 93, 60, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.faq-item summary {
+  color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-item summary::marker {
+  color: var(--jam);
+}
+
+.faq-item p {
+  margin: 0.75rem 0 0;
+  line-height: 1.65;
+}
+
+.faq-disclaimer {
+  max-width: 64ch;
+  margin: 1rem auto 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.faq-contact {
+  margin-top: 2rem;
+  text-align: center;
 }
 
 /* ---------- Scroll reveal ---------- */
