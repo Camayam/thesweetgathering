@@ -2,7 +2,7 @@
   --paper: #f7efdc;
   --paper-edge: #efe4c8;
   --ink: #3b2a2e;
-  --jam: #a8324a;
+  --jam: #d31c58;
   --sage: #6e7f5c;
   --gold: #c9a227;
   --line: #d8c9a8;
@@ -48,7 +48,7 @@ body {
   right: 0;
   z-index: 20;
   width: 100%;
-  background: rgba(150, 170, 136, 0.95);
+  background: #b6c59c;
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(59, 42, 46, 0.12);
 }
@@ -268,7 +268,7 @@ body {
   font-size: 0.8rem;
   text-decoration: none;
   color: var(--paper);
-  background: var(--jam);
+  background: #d31c58;
   padding: 0.85em 1.8em;
   border-radius: 2px;
   border: 1px solid var(--ink);
