@@ -794,6 +794,8 @@ body::before {
   .baker-row { justify-content: center; text-align: center; }
   .baker-copy { flex-basis: 100%; }
   .top-bar { height: 56px; }
+  .top-bar-inner { min-height: 56px; padding: 0.35rem 1rem; }
+  .menu-panel { top: calc(100% + 0.5rem); }
   body { padding-top: calc(56px + clamp(1rem, 4vw, 3rem)); }
   .top-bar-logo { width: 30px; height: 30px; }
   .top-bar-name { font-size: 0.95rem; }
